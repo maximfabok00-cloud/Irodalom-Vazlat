@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reneszánsz, humanizmus, reformáció</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eceff7;--paper:#fbfbff;--line:#c9d3ee;--ink:#1d2fa8;--text:#232845;--mute:#5b6283;--red:#c23b4a;--ok:#1f7a4d;--okbg:#dff3e8;--badbg:#fbe1e4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1226;--paper:#181c38;--line:#2b3263;--ink:#8fa2ff;--text:#e6e8f6;--mute:#9aa1c7;--red:#ff7d8b;--ok:#6fdca0;--okbg:#123a28;--badbg:#44202a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1226;--paper:#181c38;--line:#2b3263;--ink:#8fa2ff;--text:#e6e8f6;--mute:#9aa1c7;--red:#ff7d8b;--ok:#6fdca0;--okbg:#123a28;--badbg:#44202a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.5 Lora,Georgia,serif}
+.wrap{max-width:640px;margin:0 auto;padding:20px 16px 40px}
+h1{font:700 2.1rem/1.1 Caveat,cursive;color:var(--ink);margin:8px 0 4px}
+.sub{color:var(--mute);margin:0 0 16px;font-size:.95rem}
+nav{display:flex;gap:6px;margin-bottom:14px}
+nav button{flex:1;padding:10px 4px;font:600 1rem Lora,serif;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:8px;cursor:pointer}
+nav button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+button:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.sheet{background:var(--paper);border-radius:6px;padding:8px 18px 20px 46px;position:relative;
+background-image:repeating-linear-gradient(transparent 0 31px,var(--line) 31px 32px);line-height:32px;box-shadow:0 1px 0 var(--line)}
+.sheet:before{content:"";position:absolute;left:34px;top:0;bottom:0;width:1.5px;background:var(--red);opacity:.6}
+.sheet h2{font:700 1.45rem/32px Caveat,cursive;color:var(--ink);margin:32px 0 0}
+.sheet h2:first-child{margin-top:0}
+.sheet ul{margin:0;padding-left:20px}
+.sheet li{line-height:32px}
+.sheet em{color:var(--red);font-style:normal;font-weight:600}
+.card{perspective:900px;height:230px;margin-bottom:12px}
+.face{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;border:1.5px solid var(--ink);border-radius:12px;background:var(--paper);cursor:pointer;font:inherit;color:var(--text);font-size:1.15rem;line-height:1.4}
+.face small{color:var(--mute);font-size:.8rem;margin-bottom:10px}
+.face.back{background:var(--ink);color:var(--paper)}
+.face.back small{color:var(--paper);opacity:.75}
+.row{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.row button,.btn{padding:10px 16px;font:600 .95rem Lora,serif;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:8px;cursor:pointer}
+.count{color:var(--mute);font-size:.95rem}
+.q{font:600 1.2rem/1.35 Lora,serif;margin:6px 0 14px}
+.opt{display:block;width:100%;text-align:left;margin-bottom:8px;padding:12px 14px;font:inherit;font-size:1rem;color:var(--text);background:var(--paper);border:1.5px solid var(--line);border-radius:8px;cursor:pointer}
+.opt.ok{background:var(--okbg);border-color:var(--ok)}
+.opt.bad{background:var(--badbg);border-color:var(--red)}
+.prog{height:6px;background:var(--line);border-radius:3px;margin-bottom:14px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--ink);transition:width .25s}
+.score{font:700 3rem Caveat,cursive;color:var(--ink);text-align:center;margin:10px 0}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Reneszánsz, humanizmus, reformáció</h1>
+<p class="sub">Töri jegyzet – vázlat, tanulókártyák, kvíz</p>
+<nav role="tablist">
+<button role="tab" aria-selected="true" data-t="v">Vázlat</button>
+<button role="tab" aria-selected="false" data-t="k">Kártyák</button>
+<button role="tab" aria-selected="false" data-t="q">Kvíz</button>
+</nav>
+
+<section id="v" class="sheet">
+<h2>I. Reneszánsz – korszak és korstílus</h2>
+<ul>
+<li>14–16. század</li>
+<li>francia <em>renaissance</em> = „újjászületés”</li>
+<li>Észak-Itália városaiból indult, majd elterjedt Európában</li>
+<li>az antik görög–római eszmék újjászületése</li>
+<li>Világszemlélet:
+<ul><li>emberközpontúság</li>
+<li>a földi élet és az egyéniség fontossága („Minden dolgok mértéke az ember”)</li>
+<li>sokoldalúan művelt személyiség ideálja (<em>polihisztor</em>)</li></ul></li>
+</ul>
+<h2>II. Reneszánsz művészet és irodalom</h2>
+<ul>
+<li>Művészet: harmónia, arányosság, szépség (Botticelli: <em>Vénusz születése</em>, Michelangelo: <em>Ádám teremtése</em>)</li>
+<li>Irodalom: emberi érzések és kapcsolatok ábrázolása</li>
+<li>Témák: szerelem, barátság, természet, emberi test</li>
+<li>Új műfajok: egyéni hangú líra, tájköltészet, valóság ábrázolása</li>
+</ul>
+<h2>III. Humanizmus – új gondolkodásmód</h2>
+<ul>
+<li>latin <em>humanitas</em> = „emberiesség”</li>
+<li>világi gondolkodásmód, az evilági élet fontosságát hirdeti</li>
+<li>Tudós magatartás: klasszikus műveltség</li>
+<li>az emberközpontú szemlélet elméleti alapja</li>
+</ul>
+<h2>IV. Reformáció – hitújító mozgalom</h2>
+<ul>
+<li>16. század</li>
+<li>latin <em>reformatio</em> = „megújítás”</li>
+<li>Jellege: szellemi irányzat, vallási mozgalom</li>
+</ul>
+</section>
+
+<section id="k" hidden>
+<div class="card"><button class="face" id="face" aria-live="polite"></button></div>
+<div class="row">
+<button id="prev">Előző</button>
+<span class="count" id="cnt"></span>
+<button id="next">Következő</button>
+</div>
+<p style="text-align:center;margin:14px 0 0"><button class="btn" id="shuf">Keverés</button></p>
+</section>
+
+<section id="q" hidden>
+<div class="prog"><i id="bar"></i></div>
+<div id="qbox"></div>
+</section>
+</div>
+
+<script>
+var C=[
+["Mikor volt a reneszánsz?","14–16. század"],
+["Mit jelent a „renaissance” szó?","Újjászületés (francia szó)"],
+["Hol indult a reneszánsz?","Észak-Itália városaiból, majd elterjedt Európában"],
+["Minek az újjászületése a reneszánsz?","Az antik görög–római eszméké"],
+["Mi jellemzi a reneszánsz világszemléletét?","Emberközpontúság; a földi élet és az egyéniség fontossága"],
+["Melyik mondás jellemzi a korszakot?","„Minden dolgok mértéke az ember”"],
+["Ki a polihisztor?","Sokoldalúan művelt személyiség – a reneszánsz ideálja"],
+["Mi jellemzi a reneszánsz művészetet?","Harmónia, arányosság, szépség"],
+["Melyik Botticelli híres műve?","A Vénusz születése"],
+["Melyik Michelangelo híres műve?","Ádám teremtése"],
+["Mik a reneszánsz irodalom témái?","Szerelem, barátság, természet, emberi test"],
+["Melyek a reneszánsz új műfajai?","Egyéni hangú líra, tájköltészet, valóság ábrázolása"],
+["Mit jelent a latin humanitas?","Emberiességet"],
+["Mit hirdet a humanizmus?","Világi gondolkodásmód; az evilági élet fontosságát. Ideálja: tudós magatartás, klasszikus műveltség"],
+["Mi a reformáció?","16. századi hitújító mozgalom (latin reformatio = megújítás); szellemi irányzat és vallási mozgalom"]
+];
+var Q=[
+["Melyik században zajlott a reneszánsz?",["14–16. század","10–12. század","17–19. század","5–7. század"]],
+["Mit jelent a „renaissance”?",["Újjászületés","Megújítás","Emberiesség","Harmónia"]],
+["Hol indult a reneszánsz?",["Észak-Itália városaiban","Franciaországban","Magyarországon","Görögországban"]],
+["Minek az újjászületése a reneszánsz?",["Az antik görög–római eszméké","A középkori lovagi eszményé","A keresztény szerzetességé","A barbár népek kultúrájáé"]],
+["Ki a polihisztor?",["Sokoldalúan művelt ember","Sok nyelven író költő","Városi kereskedő","Festőművész"]],
+["Melyik mű Botticellié?",["Vénusz születése","Ádám teremtése","Mona Lisa","Utolsó vacsora"]],
+["Mi NEM jellemző a reneszánsz irodalom témáira?",["Pokoljárás szerzetesi szemmel","Szerelem","Barátság","Természet"]],
+["Mit jelent a latin humanitas?",["Emberiesség","Hitújítás","Újjászületés","Tudomány"]],
+["Mit jelent a latin reformatio?",["Megújítás","Emberiesség","Harmónia","Szépség"]],
+["Melyik a reformáció jellege?",["Szellemi irányzat és vallási mozgalom","Katonai szövetség","Művészeti stílus","Gazdasági rendszer"]]
+];
+function $(i){return document.getElementById(i)}
+var tabs=document.querySelectorAll("nav button");
+tabs.forEach(function(b){b.onclick=function(){
+tabs.forEach(function(x){x.setAttribute("aria-selected",x===b);$(x.dataset.t).hidden=x!==b})}});
+function sh(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+var deck=C.slice(),ci=0,back=false;
+function card(){var c=deck[ci];var f=$("face");f.className="face"+(back?" back":"");
+f.innerHTML="<small>"+(back?"Válasz":"Kérdés")+" – koppints a fordításhoz</small>"+(back?c[1]:c[0]);
+$("cnt").textContent=(ci+1)+" / "+deck.length}
+$("face").onclick=function(){back=!back;card()};
+$("next").onclick=function(){ci=(ci+1)%deck.length;back=false;card()};
+$("prev").onclick=function(){ci=(ci-1+deck.length)%deck.length;back=false;card()};
+$("shuf").onclick=function(){deck=sh(C);ci=0;back=false;card()};
+card();
+var qi=0,score=0,qs=[];
+function start(){qs=sh(Q);qi=0;score=0;ask()}
+function ask(){
+$("bar").style.width=(qi/qs.length*100)+"%";
+var box=$("qbox");
+if(qi>=qs.length){var p=score/qs.length;
+box.innerHTML='<div class="score">'+score+' / '+qs.length+'</div><p style="text-align:center">'+(p>=.9?"Kitűnő, ez már ül!":p>=.6?"Jó eredmény, még egy kör és tökéletes lesz.":"Nézd át újra a vázlatot, aztán próbáld újra.")+'</p><p style="text-align:center"><button class="btn" id="again">Újra</button></p>';
+$("again").onclick=start;return}
+var q=qs[qi],o=sh(q[1]);
+box.innerHTML='<div class="count">'+(qi+1)+'. kérdés / '+qs.length+'</div><p class="q">'+q[0]+'</p>';
+o.forEach(function(t){var b=document.createElement("button");b.className="opt";b.textContent=t;
+b.onclick=function(){
+var all=box.querySelectorAll(".opt");
+all.forEach(function(x){x.disabled=true;if(x.textContent===q[1][0])x.classList.add("ok")});
+if(t===q[1][0])score++;else b.classList.add("bad");
+var n=document.createElement("p");n.innerHTML='<button class="btn" id="nx">'+(qi+1<qs.length?"Következő":"Eredmény")+'</button>';
+box.appendChild(n);$("nx").focus();$("nx").onclick=function(){qi++;ask()}};
+box.appendChild(b)})}
+start();
+</script>
+</body>
+</html>
